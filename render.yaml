@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: unded  
+    runtime: python  
+    buildCommand: pip install -r requirements.txt  
+    startCommand: python3 run.py  
+    plan: free 
+    region: frankfurt
+    envVars:
+      # Sets a hardcoded value
+      # (DO NOT hardcode secrets in your Blueprint file!)
+      - key: PORT
+        value: 7860
